@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080b14"><title>Bara • Portfolio OS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="ambient a1"></div><div class="ambient a2"></div>
+<main id="authView" class="auth-wrap">
+  <section class="auth-card glass tilt">
+    <div class="brand"><div class="brand-mark">B<span>.</span></div><div><b>BARALENS</b><small>PORTFOLIO OS / 2026</small></div></div>
+    <div class="eyebrow"><span class="pulse"></span> PRIVATE WORKSPACE</div>
+    <h1>Build your<br><em>own universe.</em></h1>
+    <p class="muted">Satu ruang untuk karya, tim, dan kontrol akun. Clean interface, serious energy.</p>
+    <div class="auth-tabs"><button class="tab active" data-mode="login">Login</button><button class="tab" data-mode="register">Daftar akun</button></div>
+    <form id="authForm">
+      <label>Email</label><input id="email" type="email" placeholder="nama@email.com" autocomplete="email" required>
+      <label>Password</label><input id="password" type="password" placeholder="Minimal 8 karakter" autocomplete="current-password" minlength="8" required>
+      <button class="primary full" id="authSubmit">Masuk ke workspace <span>↗</span></button>
+      <div id="authMessage" class="message"></div>
+    </form>
+    <div class="auth-foot"><span>● Secure session</span><span>Made by Bara</span></div>
+  </section>
+  <aside class="auth-side">
+    <div class="orbit orbit1"></div><div class="orbit orbit2"></div><div class="floating-cube">B<span>³</span></div>
+    <div class="side-copy"><span class="eyebrow">DESIGN / CREATE / CONTROL</span><h2>Not just a<br>portfolio.<br><em>Your command center.</em></h2><p>Depth in design. Clarity in control.</p></div>
+    <div class="side-bottom"><span>INDONESIA</span><span>EST. 2026</span><span>✳</span></div>
+  </aside>
+</main>
+<main id="appView" class="app hidden">
+  <aside class="sidebar glass">
+    <div class="brand"><div class="brand-mark">B<span>.</span></div><div><b>BARALENS</b><small>PORTFOLIO OS</small></div></div>
+    <div class="side-label">WORKSPACE</div>
+    <button class="nav active" data-page="overview"><span>◈</span> Overview</button>
+    <button class="nav" data-page="accounts" id="accountsNav"><span>▦</span> Account directory <i id="accountCount">0</i></button>
+    <button class="nav" data-page="moderator" id="modNav"><span>✳</span> Moderator tools</button>
+    <div class="sidebar-bottom"><div class="status"><span class="pulse"></span> All systems operational</div><div class="mini-user"><div class="avatar" id="sideAvatar">B</div><div class="user-meta"><b id="sideEmail">user@email.com</b><small id="sideRole">MEMBER</small></div><button id="logoutBtn" title="Keluar">↗</button></div></div>
+  </aside>
+  <section class="main-area">
+    <header class="topbar"><div><div class="crumb">WORKSPACE <span>/</span> <b id="pageCrumb">OVERVIEW</b></div><h2 id="pageTitle">Your dashboard<span class="dot">.</span></h2></div><div class="top-actions"><div class="live-chip"><span class="pulse"></span> LIVE</div><div class="avatar big" id="topAvatar">B</div></div></header>
+    <section id="overviewPage" class="page">
+      <div class="welcome glass"><div><div class="eyebrow">TUESDAY • YOUR SPACE</div><h1>Welcome back,<br><em id="welcomeName">Creator</em></h1><p class="muted">Your ideas, your people, your rules.</p><div class="welcome-actions"><button class="primary" id="exploreBtn">Explore workspace ↗</button><span class="role-pill" id="rolePill">MEMBER</span></div></div><div class="hero-shape"><div class="hero-ring"></div><div class="hero-core">B<span>.</span></div><div class="hero-orbit"></div></div><div class="welcome-index">01 / 03</div></div>
+      <div class="stats-grid"><article class="stat glass"><div class="stat-top"><span>ACCOUNT STATUS</span><span class="stat-icon">◉</span></div><strong>Active</strong><small><span class="green">●</span> Session verified</small></article><article class="stat glass"><div class="stat-top"><span>YOUR ACCESS</span><span class="stat-icon">⌘</span></div><strong id="roleStat">Member</strong><small>Current permission level</small></article><article class="stat glass"><div class="stat-top"><span>WORKSPACE</span><span class="stat-icon">◈</span></div><strong>Baralens</strong><small>From Indonesia 🇮🇩</small></article></div>
+      <div class="section-head"><div><span class="eyebrow">QUICK ACCESS</span><h3>Jump right in</h3></div><span class="muted tiny">YOUR CONTROL PANEL</span></div>
+      <div class="quick-grid"><button class="quick glass" data-goto="accounts"><span class="quick-icon">▦</span><b>Account directory</b><small>View and manage accounts</small><span class="quick-arrow">↗</span></button><button class="quick glass" data-goto="moderator"><span class="quick-icon">✳</span><b>Moderator tools</b><small>Review workspace access</small><span class="quick-arrow">↗</span></button></div>
+    </section>
+    <section id="accountsPage" class="page hidden"><div class="section-head"><div><span class="eyebrow">PEOPLE & PERMISSIONS</span><h3>Account directory</h3><p class="muted">Pilih akun untuk melihat detail dan mengatur role.</p></div><div class="search-wrap">⌕ <input id="searchInput" placeholder="Cari email..."></div></div><div id="accountsNotice" class="notice hidden"></div><div id="accountGrid" class="account-grid"></div></section>
+    <section id="moderatorPage" class="page hidden"><div class="section-head"><div><span class="eyebrow">CONTROL CENTER</span><h3>Moderator tools</h3><p class="muted">Ringkasan akses untuk Moderator dan CEO.</p></div></div><div id="moderatorContent" class="mod-panel glass"></div></section>
+    <footer>BARALENS <span>•</span> FROM INDONESIA <span>•</span> BARA DEVELOPER <span class="footer-right">© 2026</span></footer>
+  </section>
+</main>
+<div id="userModal" class="modal hidden"><div class="modal-backdrop" id="modalBackdrop"></div><section class="modal-card glass"><button class="modal-close" id="modalClose">×</button><div class="modal-avatar" id="modalAvatar">B</div><span class="eyebrow">ACCOUNT DETAILS</span><h2 id="modalEmail">user@email.com</h2><div class="detail-row"><span>Account ID</span><code id="modalId">—</code></div><div class="detail-row"><span>Role sekarang</span><b id="modalRole">Member</b></div><div class="detail-row"><span>Terdaftar</span><b id="modalCreated">—</b></div><div id="roleControls" class="role-controls"><label>Ubah role</label><select id="roleSelect"><option value="Member">Member</option><option value="Moderator">Moderator</option><option value="CEO">CEO</option></select><button class="primary full" id="saveRoleBtn">Simpan perubahan ↗</button></div><div id="modalMessage" class="message"></div></section></div>
+<script src="/app.js"></script>
+</body></html>
