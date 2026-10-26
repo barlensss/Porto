@@ -1,0 +1,14 @@
+{
+  "name": "bara-portfolio-dashboard",
+  "version": "1.0.0",
+  "description": "3D portfolio with signup, login, account dashboard and role management",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "express-session": "^1.18.1",
+    "helmet": "^8.0.0"
+  }
+}
